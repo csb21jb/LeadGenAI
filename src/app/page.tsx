@@ -3,7 +3,6 @@
 import { useState, useEffect } from 'react';
 import { Geist } from 'next/font/google';
 import { Send, User, Mail, Building, History, Search, X, ExternalLink, ChevronDown, ChevronUp, Moon, Sun, Menu } from 'lucide-react';
-import type { PersonResult } from '@/lib/perplexity';
 import LeadResultDisplay from '@/components/LeadResultDisplay';
 
 const geistSans = Geist({
@@ -372,7 +371,7 @@ export default function Home() {
                                   ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400' 
                                   : 'border-gray-300 text-gray-700'
                               } rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 text-sm`}
-                              placeholder="John Smith"
+                              placeholder="Chris Breezy"
                               value={name}
                               onChange={(e) => setName(e.target.value)}
                               required
