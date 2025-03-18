@@ -25,13 +25,17 @@ For Linux users:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/LeadGenAI.git
+   git clone https://github.com/csb21jb/LeadGenAI.git
    cd LeadGenAI
    ```
-
-2. Run the setup script:
+2. Install inital dependencies:
    ```bash
-   python setup.py
+   apt update && upgrade
+   apt install python3
+   ```
+3. Run the setup script:
+   ```bash
+   python3 setup.py
    ```
    This will:
    - Install system dependencies (git, nodejs, etc.)
@@ -41,24 +45,24 @@ For Linux users:
    - Install Python dependencies
    - Create a template .env file
 
-3. Configure your environment:
+4. Configure your environment:
    - Open `.env` file
    - Add your OpenAI API key
    - Update any other necessary environment variables
 
-4. Start the development server:
+5. Start the development server:
    ```bash
    npm run dev
    ```
 
-5. Visit `http://localhost:3000` in your browser
+6. Visit `http://localhost:3000` in your browser
 
 ## Manual Setup (if setup.py fails)
 
 1. Install system dependencies:
    - Git
    - Node.js
-   - Python 3
+   - Python3
 
 2. Install Node.js dependencies:
    ```bash
@@ -67,7 +71,7 @@ For Linux users:
 
 3. Create and activate Python virtual environment:
    ```bash
-   python -m venv venv
+   python3 -m venv venv
    # On Windows:
    .\venv\Scripts\activate
    # On Unix or MacOS:
@@ -82,7 +86,6 @@ For Linux users:
 5. Create `.env` file:
    ```
    OPENAI_API_KEY=your_openai_api_key_here
-   NODE_ENV=development
    ```
 
 ## Features
@@ -106,13 +109,6 @@ For Linux users:
 - OpenAI API
 - Python (for setup and utilities)
 
-## Contributing
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
 
 ## License
 

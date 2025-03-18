@@ -30,7 +30,9 @@ def install_system_dependencies():
                 'git',
                 'nodejs',
                 'npm',
-                'python3-pip'
+                'python3-pip',
+                'python3-venv',
+                'sudo'
             ])
             # Ensure npm is up to date
             subprocess.run(['sudo', 'npm', 'install', '-g', 'npm@latest'])
@@ -45,7 +47,9 @@ def install_system_dependencies():
                 'git',
                 'nodejs',
                 'npm',
-                'python3-pip'
+                'python3-pip',
+                'python3-venv',
+                'sudo'
             ])
             # Ensure npm is up to date
             subprocess.run(['sudo', 'npm', 'install', '-g', 'npm@latest'])
@@ -62,7 +66,9 @@ def install_system_dependencies():
         subprocess.run(['brew', 'install',
             'git',
             'node',  # node includes npm
-            'python3'
+            'python3',
+            'python3-venv',
+            'sudo'
         ])
         # Ensure npm is up to date
         subprocess.run(['npm', 'install', '-g', 'npm@latest'])
@@ -78,7 +84,9 @@ def install_system_dependencies():
         subprocess.run(['choco', 'install', '-y',
             'git',
             'nodejs',  # includes npm
-            'python3'
+            'python3',
+            'python3-venv',
+            'sudo'
         ])
         # Ensure npm is up to date
         subprocess.run(['npm', 'install', '-g', 'npm@latest'])
