@@ -1,3 +1,6 @@
+
+![LeadGenAI](https://github.com/user-attachments/assets/95da51e3-8079-47e2-a127-f8529917abdf)
+
 # LeadGenuis - AI-Powered Lead Generation Platform
 
 A modern web application for AI-powered lead generation and prospecting, built with Next.js, TypeScript, and Tailwind CSS.
