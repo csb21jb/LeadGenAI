@@ -1,0 +1,468 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+html, body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+  height: auto;
+  min-height: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/* Make sure scrollable containers work properly */
+.overflow-y-auto {
+  overflow-y: auto !important;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Add some bottom padding to ensure all content is visible */
+.pb-10 {
+  padding-bottom: 2.5rem !important;
+}
+
+/* Styles for the HTML content from OpenAI */
+.lead-result-container {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.lead-result {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+.dark.lead-result,
+.dark .lead-result {
+  color: #e5e7eb;
+}
+
+.lead-result h1 {
+  font-size: 2.25rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  color: #1e40af;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #dbeafe;
+}
+
+.dark .lead-result h1 {
+  color: #60a5fa;
+  border-bottom-color: #1e40af;
+}
+
+.lead-result .section-heading,
+.lead-result h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  background-color: #f3f4f6;
+  color: #1f2937;
+  border-left: 4px solid #3b82f6;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.2s ease;
+}
+
+.dark .lead-result .section-heading,
+.dark .lead-result h2 {
+  background-color: #1f2937;
+  color: #f3f4f6;
+  border-left-color: #3b82f6;
+}
+
+.lead-result h2:hover {
+  background-color: #e5e7eb;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.dark .lead-result h2:hover {
+  background-color: #374151;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.lead-result h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: #374151;
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 0.25rem;
+}
+
+.dark .lead-result h3 {
+  color: #d1d5db;
+  border-bottom-color: #374151;
+}
+
+.lead-result p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.lead-result ul {
+  margin: 0.75rem 0 1.5rem 0;
+  padding-left: 1.75rem;
+  list-style-type: disc;
+}
+
+.lead-result ol {
+  margin: 0.75rem 0 1.5rem 0;
+  padding-left: 1.75rem;
+  list-style-type: decimal;
+}
+
+.lead-result li {
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+  position: relative;
+}
+
+.lead-result li::marker {
+  color: #3b82f6;
+}
+
+.dark .lead-result li::marker {
+  color: #60a5fa;
+}
+
+.lead-result a {
+  color: #2563eb;
+  text-decoration: underline;
+  transition: all 0.2s;
+  font-weight: 500;
+  word-break: break-word;
+}
+
+.lead-result a:hover {
+  color: #1d4ed8;
+  text-decoration: underline;
+}
+
+.dark .lead-result a {
+  color: #60a5fa;
+}
+
+.dark .lead-result a:hover {
+  color: #93c5fd;
+}
+
+.lead-result strong, 
+.lead-result b {
+  font-weight: 600;
+  color: #111827;
+}
+
+.dark .lead-result strong,
+.dark .lead-result b {
+  color: #f9fafb;
+}
+
+.lead-result .last-updated {
+  color: #6b7280;
+  font-size: 0.875rem;
+  margin-bottom: 1.5rem;
+  font-style: italic;
+}
+
+.dark .lead-result .last-updated {
+  color: #9ca3af;
+}
+
+.lead-result .sources-section {
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 2px solid #e5e7eb;
+  background-color: #f9fafb;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+}
+
+.dark .lead-result .sources-section {
+  border-top-color: #374151;
+  background-color: #111827;
+}
+
+.lead-result .sources-section h2 {
+  font-size: 1.25rem;
+  border-bottom: none;
+  margin-top: 0;
+}
+
+.lead-result .error-message {
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  background-color: #fee2e2;
+  color: #b91c1c;
+  border: 1px solid #f87171;
+  margin: 1rem 0;
+}
+
+.dark .lead-result .error-message {
+  background-color: #7f1d1d;
+  color: #fecaca;
+  border-color: #b91c1c;
+}
+
+/* Section toggle styling */
+.section-content {
+  padding: 0 1rem 1rem 1rem;
+  margin-bottom: 1.5rem;
+  transition: all 0.3s ease-out;
+  overflow: hidden;
+  border-radius: 0 0 0.5rem 0.5rem;
+}
+
+.lead-result .toggle-icon {
+  display: inline-block;
+  font-size: 0.875rem;
+  margin-left: 0.5rem;
+  transition: transform 0.2s;
+  color: #4b5563;
+}
+
+.dark .lead-result .toggle-icon {
+  color: #9ca3af;
+}
+
+/* Responsive styles */
+@media (max-width: 640px) {
+  .lead-result h1 {
+    font-size: 1.75rem;
+  }
+  
+  .lead-result h2 {
+    font-size: 1.25rem;
+  }
+  
+  .lead-result h3 {
+    font-size: 1.125rem;
+  }
+  
+  .section-content {
+    padding: 0 0.5rem 0.5rem 0.5rem;
+  }
+}
+
+.lead-profile {
+  margin-bottom: 2rem;
+  max-width: 100%;
+  line-height: 1.8;
+}
+
+.lead-profile .profile-header {
+  background: linear-gradient(to right, #1e40af, #3b82f6);
+  color: white;
+  padding: 2rem;
+  border-radius: 0.75rem;
+  margin-bottom: 2rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 12px -1px rgba(0, 0, 0, 0.1), 0 2px 6px -1px rgba(0, 0, 0, 0.06);
+}
+
+.dark .lead-profile .profile-header {
+  background: linear-gradient(to right, #1e3a8a, #1d4ed8);
+}
+
+.lead-profile .profile-header h1 {
+  color: white !important;
+  border: none !important;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.lead-profile .profile-header .last-updated {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.875rem;
+  font-style: italic;
+  margin-bottom: 0;
+}
+
+/* Improve spacing for section headers */
+.lead-result h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-top: 2.5rem;
+  margin-bottom: 1.5rem;
+  padding: 0.85rem 1.25rem;
+  border-radius: 0.5rem;
+  background-color: #f3f4f6;
+  color: #1f2937;
+  border-left: 5px solid #3b82f6;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.2s ease;
+  letter-spacing: 0.015em;
+}
+
+/* Sub-section headers with improved spacing */
+.lead-result h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: #374151;
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.dark .lead-result h3 {
+  color: #e5e7eb;
+  border-bottom-color: #4b5563;
+}
+
+/* Improve paragraphs */
+.lead-result p {
+  margin-bottom: 1.2rem;
+  line-height: 1.8;
+  padding: 0 0.5rem;
+}
+
+/* Better list styling */
+.lead-result ul,
+.lead-result ol {
+  margin: 1rem 0 1.8rem 0;
+  padding-left: 2.25rem;
+}
+
+.lead-result li {
+  margin-bottom: 0.8rem;
+  line-height: 1.7;
+  position: relative;
+  padding-left: 0.5rem;
+}
+
+/* Enhance label formatting */
+.lead-result strong,
+.lead-result b {
+  font-weight: 600;
+  color: #111827;
+  margin-right: 0.5rem;
+}
+
+.dark .lead-result strong,
+.dark .lead-result b {
+  color: #f3f4f6;
+}
+
+/* Add spacing to section content */
+.section-content {
+  padding: 0 1.5rem 1.5rem 1.5rem;
+  margin-bottom: 2rem;
+  transition: all 0.3s ease-out;
+  overflow: hidden;
+  border-radius: 0 0 0.5rem 0.5rem;
+}
+
+/* Create visual grouping for each data point */
+.lead-result .data-point {
+  margin-bottom: 1.2rem;
+  padding: 0.75rem;
+  border-radius: 0.375rem;
+}
+
+.lead-result .data-point:hover {
+  background-color: #f9fafb;
+}
+
+.dark .lead-result .data-point:hover {
+  background-color: #1f2937;
+}
+
+/* For key-value pairs */
+.lead-result .key-value {
+  display: grid;
+  grid-template-columns: 10rem 1fr;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+  padding: 0.5rem;
+  border-bottom: 1px dashed #e5e7eb;
+}
+
+.dark .lead-result .key-value {
+  border-bottom-color: #374151;
+}
+
+/* Talking points styling */
+.lead-result .talking-point {
+  margin-bottom: 1.25rem;
+  padding: 1rem;
+  background-color: #f3f4f6;
+  border-radius: 0.5rem;
+  border-left: 3px solid #3b82f6;
+}
+
+.dark .lead-result .talking-point {
+  background-color: #1f2937;
+  border-left-color: #60a5fa;
+}
+
+/* Sources section with better styling */
+.lead-result .sources-section {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 2px solid #e5e7eb;
+  background-color: #f9fafb;
+  padding: 1.5rem 2rem;
+  border-radius: 0.5rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .lead-result h1 {
+    font-size: 1.75rem;
+  }
+  
+  .lead-result h2 {
+    font-size: 1.25rem;
+    padding: 0.75rem 1rem;
+  }
+  
+  .lead-result h3 {
+    font-size: 1.125rem;
+  }
+  
+  .lead-result .key-value {
+    grid-template-columns: 1fr;
+    gap: 0.25rem;
+  }
+  
+  .section-content {
+    padding: 0 0.75rem 1rem 0.75rem;
+  }
+  
+  .lead-profile .profile-header {
+    padding: 1.5rem;
+  }
+}
