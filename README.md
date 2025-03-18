@@ -5,6 +5,10 @@
 
 A modern web application for AI-powered lead generation and prospecting, built with Next.js, TypeScript, and Tailwind CSS.
 
+
+https://github.com/user-attachments/assets/0c1067d4-a018-46b1-9d18-86f97e8f4d68
+
+
 ## Prerequisites
 
 Before you begin, ensure you have the following installed:
