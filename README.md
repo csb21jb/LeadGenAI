@@ -1,64 +1,116 @@
-# LeadGenuis - AI-Powered Lead Generation Platform
+# LeadGenAI
 
-A modern web application for AI-powered lead generation and prospecting, built with Next.js, TypeScript, and Tailwind CSS.
+An AI-powered lead generation tool that uses OpenAI's web search capabilities to gather comprehensive information about potential leads.
 
-## Features
+## Prerequisites
 
-- **AI-Powered Prospecting**: Generate potential leads using GPT-based analysis of company data and market signals
-- **Dashboard**: View key metrics and stats about your prospecting activities
-- **CSV Export**: Export prospect data for use in other tools
-- **Responsive Design**: Works on desktop and mobile devices
+Before you begin, ensure you have the following installed:
+- Python 3.8 or higher
+- Node.js 18 or higher
+- Git
 
-## Tech Stack
+For Windows users:
+- [Chocolatey](https://chocolatey.org/install) package manager
 
-- **Frontend**: Next.js with App Router, TypeScript, Tailwind CSS
-- **AI Integration**: OpenAI API (GPT-4o-mini) for AI-powered prospecting
-- **UI Components**: Custom components styled with Tailwind CSS
-- **Icons**: Lucide React for beautiful and consistent iconography
+For macOS users:
+- [Homebrew](https://brew.sh/) package manager (will be installed automatically if not present)
 
-## Getting Started
+For Linux users:
+- `apt` or `dnf` package manager (depending on your distribution)
 
-### Prerequisites
+## Quick Start
 
-- Node.js 18.x or higher
-- npm or yarn
-- OpenAI API key
-
-
-https://github.com/user-attachments/assets/78ec749a-424a-475f-931a-c7784a4c5fdb
-
-
-### Installation
-
-1. Clone the repository
-2. Install dependencies:
+1. Clone the repository:
    ```bash
-   npm install
+   git clone https://github.com/yourusername/LeadGenAI.git
+   cd LeadGenAI
    ```
-3. Configure environment variables:
-   Create a `.env.local` file in the root directory with:
+
+2. Run the setup script:
+   ```bash
+   python setup.py
    ```
-   OPENAI_API_KEY=your_openai_api_key
-   ```
-4. Run the development server:
+   This will:
+   - Install system dependencies (git, nodejs, etc.)
+   - Configure git if needed
+   - Install Node.js dependencies
+   - Create a Python virtual environment
+   - Install Python dependencies
+   - Create a template .env file
+
+3. Configure your environment:
+   - Open `.env` file
+   - Add your OpenAI API key
+   - Update any other necessary environment variables
+
+4. Start the development server:
    ```bash
    npm run dev
    ```
-5. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-## Usage
+5. Visit `http://localhost:3000` in your browser
 
-1. Navigate to the Prospecting page
-2. Fill in your details in the form
-3. Submit to generate prospect leads
-4. View generated prospects and download as CSV if needed
+## Manual Setup (if setup.py fails)
 
-## Project Structure
+1. Install system dependencies:
+   - Git
+   - Node.js
+   - Python 3
 
-- `/src/app` - Next.js App Router pages
-- `/src/components` - Reusable UI components
-- `/public` - Static assets
+2. Install Node.js dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Create and activate Python virtual environment:
+   ```bash
+   python -m venv venv
+   # On Windows:
+   .\venv\Scripts\activate
+   # On Unix or MacOS:
+   source venv/bin/activate
+   ```
+
+4. Install Python dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+5. Create `.env` file:
+   ```
+   OPENAI_API_KEY=your_openai_api_key_here
+   NODE_ENV=development
+   ```
+
+## Features
+
+- AI-powered lead research using OpenAI's web search
+- Comprehensive lead profiles including:
+  - Professional background
+  - Company information
+  - Digital presence
+  - Business challenges
+  - Outreach strategies
+- Search history management
+- Dark/Light mode support
+- Responsive design
+
+## Tech Stack
+
+- Next.js 14
+- TypeScript
+- Tailwind CSS
+- OpenAI API
+- Python (for setup and utilities)
+
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
 ## License
 
-MIT
+This project is licensed under the MIT License - see the LICENSE file for details.
