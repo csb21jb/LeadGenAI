@@ -24,6 +24,10 @@ A modern web application for AI-powered lead generation and prospecting, built w
 - npm or yarn
 - OpenAI API key
 
+
+https://github.com/user-attachments/assets/78ec749a-424a-475f-931a-c7784a4c5fdb
+
+
 ### Installation
 
 1. Clone the repository
@@ -32,10 +36,9 @@ A modern web application for AI-powered lead generation and prospecting, built w
    npm install
    ```
 3. Configure environment variables:
-   Create a `.env` file in the root directory with:
+   Create a `.env.local` file in the root directory with:
    ```
    OPENAI_API_KEY=your_openai_api_key
-   OPENAI_MODEL=gpt4o-mini
    ```
 4. Run the development server:
    ```bash
